@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "tipalti_zendesker",
+    "version": "1.0",
+    "description": "fetches data from zendesk ticket",
+    "host_permissions": [
+        "https://tipalti.zendesk.com/agent/tickets/*"
+    ],
+    "permissions": [
+		"activeTab",
+		"scripting",
+		"storage",
+		"tabs",
+		"contextMenus",
+		"notifications",
+		"identity",
+		"clipboardWrite"
+	],
+    "action": {
+        "default_popup": "popup.html",
+        "default_tile": "Tipalti Zendesker"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://tipalti.zendesk.com/agent/tickets/*"],
+            "js": ["zendesk_ticket.js"],
+            "run_at": "document_end"
+        }
+    ]
+}
