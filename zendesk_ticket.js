@@ -6,9 +6,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         const requester = getRequester();
         const {conversation, internalNotes} = getTicketContent()
         console.log("Organisation:", organisation);
-        console.log("Requester:", requester);
-        console.log("Conversation:", conversation);
-        console.log("Internal Notes:", internalNotes);
         
         sendResponse({
             success: true,

@@ -4,7 +4,8 @@
     "version": "1.0",
     "description": "fetches data from zendesk ticket",
     "host_permissions": [
-        "https://tipalti.zendesk.com/agent/tickets/*"
+        "https://tipalti.zendesk.com/agent/tickets/*",
+        "https://tipalti2-be.glean.com/rest/api/v1/*"
     ],
     "permissions": [
 		"activeTab",

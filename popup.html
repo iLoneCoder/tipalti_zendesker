@@ -35,6 +35,11 @@
         button:hover {
             background-color: #005a87;
         }
+        button:disabled {
+            background-color:#005a87;
+            cursor: auto;
+        }
+
         .status {
             margin-top: 10px;
             padding: 8px;
@@ -70,7 +75,12 @@
         
         <div class="form-group">
             <label for="notes">Notes:</label>
-            <textarea id="notes" name="notes" rows="3" placeholder="Add any notes..."></textarea>
+            <textarea id="notes" name="notes" rows="3" placeholder="Add any notes..." disabled></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="token">Token</label>
+            <input type="text" id="token" name="token" placeholder="Enter token">
         </div>
         
         <button type="submit">Execute</button>
